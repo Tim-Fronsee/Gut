@@ -68,7 +68,7 @@ func _load_options_from_config_file(file_path, into):
 	var f = File.new()
 	if(!f.file_exists(file_path)):
 		if(file_path != 'res://.gutconfig.json'):
-			print('ERROR:  Config File "', file_path, '" does not exist.')
+			push_error('Config File "', file_path, '" does not exist.')
 			return -1
 		else:
 			return 1
